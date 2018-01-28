@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">25dp</dimen>
+    <dimen name="button_width">120dp</dimen>
+    <dimen name="txt_width">300dp</dimen>
+    <dimen name="font_small">14</dimen>
+    <dimen name="font_medium">16</dimen>
+    <dimen name="font_large">18</dimen>
+    <dimen name="font_xlarge">20</dimen>
+    <dimen name="font_xxlarge">22</dimen>
+    <dimen name="font_title">20</dimen>
+</resources>

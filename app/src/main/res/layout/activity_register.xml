@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.gisela.praktikum01.Register">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/registrasi"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Fullname"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/txtRePassword"
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/repassword"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="@dimen/txt_width"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnRegistrasi"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/registrasi"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="431dp" />
+
+</LinearLayout>

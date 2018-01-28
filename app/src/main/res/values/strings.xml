@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Expence Tracker</string>
+    <string name="login">Login</string>
+    <string name="belummemilikiakun">Belum memiliki akun?</string>
+    <string name="registrasi">Registrasi</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="repassword">Re-password</string>
+    <string name="fullname">Nama Lengkap</string>
+
+    <string name="pengeluaran">Pengeluaran</string>
+    <string name="saldo">Saldo</string>
+    <string name="pemasukan">Pemasukan</string>
+    <string name="transaksi">Transaksi</string>
+
+    <string name="deskripsi">Deskripsi</string>
+    <string name="kategori">Kategori : </string>
+    <string name="tambah">Tambah</string>
+
+    <string name="tahun">Tahun</string>
+    <string name="bulan">Bulan</string>
+
+</resources>
