@@ -51,6 +51,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/hapus"
             app:srcCompat="@android:drawable/ic_menu_delete" />
 
         <ImageButton
@@ -60,6 +61,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/kembali"
             app:srcCompat="@android:drawable/ic_menu_revert" />
 
     </LinearLayout>

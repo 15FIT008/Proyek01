@@ -13,6 +13,8 @@
     <string name="saldo">Saldo</string>
     <string name="pemasukan">Pemasukan</string>
     <string name="transaksi">Transaksi</string>
+    <string name="hapus">Hapus</string>
+    <string name="kembali">Kembali</string>
 
     <string name="deskripsi">Deskripsi</string>
     <string name="kategori">Kategori : </string>
@@ -20,5 +22,9 @@
 
     <string name="tahun">Tahun</string>
     <string name="bulan">Bulan</string>
+    <string name="cek">Cek</string>
+
+    <string name="total">total</string>
+    <string name="batas">batas</string>
 
 </resources>
