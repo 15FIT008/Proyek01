@@ -117,6 +117,17 @@
             tools:layout_editor_absoluteX="133dp"
             tools:layout_editor_absoluteY="431dp" />
 
+        <Button
+            android:id="@+id/btnRegistrasi3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="@dimen/margin_title"
+            android:background="@android:color/holo_green_light"
+            android:text="@string/tambah_dan_buat_Alokasi"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="431dp" />
+
     </LinearLayout>
 
 </LinearLayout>

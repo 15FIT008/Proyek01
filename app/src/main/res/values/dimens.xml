@@ -9,4 +9,5 @@
     <dimen name="font_xlarge">20sp</dimen>
     <dimen name="font_xxlarge">22sp</dimen>
     <dimen name="font_title">20sp</dimen>
+    <dimen name="margin_title">10dp</dimen>
 </resources>

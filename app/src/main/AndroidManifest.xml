@@ -23,7 +23,9 @@
         <activity android:name=".addOutcome" />
         <activity android:name=".Setting" />
         <activity android:name=".pengeluaran" />
-        <activity android:name=".pemasukan"></activity>
+        <activity android:name=".pemasukan" />
+        <activity android:name=".Alokasi" />
+        <activity android:name=".UbahTambahAlokasi"></activity>
     </application>
 
 </manifest>
