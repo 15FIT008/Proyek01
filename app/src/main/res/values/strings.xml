@@ -20,15 +20,17 @@
     <string name="jumtransaksi">Jumlah Transaksi</string>
 
     <string name="deskripsi">Deskripsi</string>
-    <string name="kategori">Kategori : </string>
+    <string name="kategori">Kategori</string>
     <string name="tambah">Tambah</string>
 
+    <string name="date">Tanggal</string>
     <string name="tahun">Tahun</string>
     <string name="bulan">Bulan</string>
     <string name="cek">Cek</string>
 
-    <string name="total">total</string>
-    <string name="batas">batas</string>
+    <string name="total">Total</string>
+    <string name="batas">Batas</string>
+    <string name="detail">Detail</string>
 
     <string name="setting">Pengaturan</string>
     <string name="simpan">Simpan</string>
@@ -38,6 +40,7 @@
     <string name="format_mata_uang">Format Mata Uang : </string>
     <string name="bahasa">Bahasa : </string>
     <string name="buat_atau_ubah_alokasi">Buat atau Ubah Alokasi</string>
+    <string name="logout">Logout</string>
 
     <string name="tambah_dan_buat_Alokasi">Tambah dan Buat Alokasi</string>
 
