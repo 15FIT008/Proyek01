@@ -9,6 +9,8 @@ import butterknife.OnClick;
 
 public class Dashboard extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +22,24 @@ public class Dashboard extends AppCompatActivity {
     void fabTambahPemasukanOnAct(){
         Intent goToAddIncome =new Intent(Dashboard.this,addIncome.class);
         startActivity(goToAddIncome);
+    }
+
+    @OnClick(R.id.btnIncome)
+    void btnIncomeOnAct (){
+        Intent goToIncome = new Intent(Dashboard.this,pemasukan.class);
+        startActivity(goToIncome);
+
+    }
+
+    @OnClick(R.id.btnOutcome)
+    void btnOutcome(){
+        Intent goToOutcome = new Intent(Dashboard.this, pengeluaran.class);
+        startActivity(goToOutcome);
+    }
+
+    @OnClick(R.id.btnAlokasi)
+    void btnAlokasiOnAct(){
+        Intent goToAlokasi = new Intent(Dashboard.this, Alokasi.class);
+        startActivity(goToAlokasi);
     }
 }

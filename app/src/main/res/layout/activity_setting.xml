@@ -99,7 +99,7 @@
 
                 <Button
                     android:id="@+id/btnRegistrasi"
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/button_width"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:background="@android:color/holo_green_light"
@@ -109,7 +109,7 @@
 
                 <Button
                     android:id="@+id/btnRegistrasi2"
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/button_width"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_marginTop="@dimen/margin_title"

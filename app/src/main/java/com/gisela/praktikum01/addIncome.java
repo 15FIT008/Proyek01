@@ -43,7 +43,7 @@ public class addIncome extends AppCompatActivity {
         kategori.add("Bonus Bulanan");
         kategori.add("Gaji ke-13");
         Spinner spinner = (Spinner) findViewById(R.id.cmbKategoriPemasukan);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, kategori);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, kategori);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
     }
@@ -75,8 +75,4 @@ public class addIncome extends AppCompatActivity {
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat(format, Locale.US);
         txtDate.setText(simpleDateFormat.format(calendar.getTime()));
     }
-
-
-
-
 }

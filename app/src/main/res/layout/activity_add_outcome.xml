@@ -38,7 +38,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/btnDelete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -48,7 +48,7 @@
                     app:srcCompat="@android:drawable/ic_menu_delete" />
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/btnBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -73,12 +73,12 @@
                     android:text="@string/pengeluaran" />
 
                 <EditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/txtPengeluaran"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/pengeluaran"
-                    android:inputType="textPersonName" />
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -87,6 +87,7 @@
                     android:text="@string/kategori" />
 
                 <Spinner
+                    android:id="@+id/cmbKategori"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center" />
@@ -98,6 +99,7 @@
                     android:text="@string/date" />
 
                 <EditText
+                    android:id="@+id/txtDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -110,6 +112,7 @@
                     android:text="@string/deskripsi" />
 
                 <EditText
+                    android:id="@+id/txtDeskripsi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -118,8 +121,8 @@
                     android:inputType="textMultiLine" />
 
                 <Button
-                    android:id="@+id/btnRegistrasi"
-                    android:layout_width="match_parent"
+                    android:id="@+id/btnTambahPengeluaran"
+                    android:layout_width="@dimen/button_width"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:background="@android:color/holo_green_light"
