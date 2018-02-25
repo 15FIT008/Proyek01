@@ -46,4 +46,5 @@
 
     <string name="alokasi">Alokasi</string>
     <string name="ubah">Ubah</string>
+    <string name="user_not_approved">Your email or password is not valid</string>
 </resources>

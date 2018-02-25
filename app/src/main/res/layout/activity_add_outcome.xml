@@ -87,7 +87,7 @@
                     android:text="@string/kategori" />
 
                 <Spinner
-                    android:id="@+id/cmbKategori"
+                    android:id="@+id/cmbKategoriPengeluaran"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center" />

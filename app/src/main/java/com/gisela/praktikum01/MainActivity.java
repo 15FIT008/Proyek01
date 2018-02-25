@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.gisela.praktikum01.entity.UserLoginTask;
+import com.gisela.praktikum01.entity.UserWrapper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,16 +36,24 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setMessage("Please fill all field!");
             alert.show();
-        }else if (!txtEmail.getText().toString().trim().equals("giselakurniawati18@gmail.com") || !txtPassword.getText().toString().trim().equals("ukm12345*")) {
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.setMessage("Your email or password is not valid");
-            alert.show();
-        }else {
-            Intent goToDashboard =new Intent(MainActivity.this,Dashboard.class);
-            startActivity(goToDashboard);
+        }else{
+            UserLoginTask userLoginTask = new UserLoginTask(this);
+            System.out.println("EMAIL : " + txtEmail.getText().toString() + "PASSWORD : " +
+                    txtPassword                    .getText()                    .toString());
+            userLoginTask.execute(txtEmail.getText().toString(), txtPassword.getText().toString());
         }
     }
-
+    public void openDashboard (UserWrapper userWrapper) {
+        if (null != userWrapper && userWrapper.getStatus() == 1) {
+            Toast.makeText(this, userWrapper.getMessage(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, Dashboard.class);
+            this.startActivity(intent);
+            this.finish();
+        } else {
+            Toast.makeText(this, this.getResources().getString(R.string.user_not_approved),
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
     @OnClick (R.id.btnRegistrasi)
     void btnRegistrasiOnAct(){
         Intent goToRegistrasi =new Intent(MainActivity.this,Register.class);

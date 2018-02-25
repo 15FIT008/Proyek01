@@ -1,10 +1,12 @@
 package com.gisela.praktikum01;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -27,6 +29,8 @@ import butterknife.OnClick;
 public class addIncome extends AppCompatActivity {
 
     @BindView(R.id.cmbKategoriPemasukan) Spinner cmbKategoriPemasukan;
+    @BindView(R.id.txtPemasukan) EditText txtPemasukan;
+    @BindView(R.id.txtDeskripsi) EditText txtDeskripsi;
     @BindView(R.id.txtDate) EditText txtDate;
     @BindView(R.id.btnBack) ImageButton btnBack;
     Calendar calendar=Calendar.getInstance();
@@ -52,6 +56,22 @@ public class addIncome extends AppCompatActivity {
     void btnBackOnAct (){
         Intent goToDashboard =new Intent(addIncome.this,Dashboard.class);
         startActivity(goToDashboard);
+    }
+
+    @OnClick(R.id.btnTambahPemasukan)
+    void btnTambahPemasukanOnAct(){
+        if (TextUtils.isEmpty(txtDate.getText().toString().trim()) || TextUtils.isEmpty
+                (cmbKategoriPemasukan.getSelectedItem().toString().trim()) || TextUtils.isEmpty
+                (txtPemasukan.getText().toString().trim())){
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setMessage("Please fill all field");
+            alert.show();
+        }else {
+            Date getDate = new Date();
+            String kategori = cmbKategoriPemasukan.getSelectedItem().toString().trim();
+            int pemasukan = Integer.valueOf(txtPemasukan.getText().toString().trim());
+            String deskripsi = txtDeskripsi.getText().toString().trim();
+        }
     }
 
     @OnClick(R.id.txtDate)

@@ -8,6 +8,11 @@ import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.gisela.praktikum01.entity.DataWrapper;
+import com.gisela.praktikum01.entity.UserRegisterTask;
+import com.gisela.praktikum01.entity.UserWrapper;
 
 import org.w3c.dom.Text;
 
@@ -53,11 +58,25 @@ public class Register extends AppCompatActivity {
             alert.show();
         }
         else {
+            UserRegisterTask userRegisterTask = new UserRegisterTask(this);
+            userRegisterTask.execute(txtFullname.getText().toString(),txtEmail.getText().toString(),
+                    txtPassword.getText().toString());
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setMessage("Your registration is successful!");
             alert.show();
-            Intent goToLogin =new Intent(Register.this,MainActivity.class);
-            startActivity(goToLogin);
+//            Intent goToLogin =new Intent(Register.this,MainActivity.class);
+  //          startActivity(goToLogin);
+        }
+    }
+    public void openMainActivity (DataWrapper dataWrapper) {
+        if (null != dataWrapper && dataWrapper.getStatus() == 1) {
+            Toast.makeText(this, dataWrapper.getMessage(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Register.this, MainActivity.class);
+            this.startActivity(intent);
+            this.finish();
+        } else {
+            Toast.makeText(this, this.getResources().getString(R.string.user_not_approved),
+                    Toast.LENGTH_SHORT).show();
         }
     }
 }
