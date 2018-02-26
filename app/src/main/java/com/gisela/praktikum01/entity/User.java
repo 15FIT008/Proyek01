@@ -6,9 +6,9 @@ package com.gisela.praktikum01.entity;
 
 public class User {
     private int id;
-    private int fullname;
-    private int email;
-    private int password;
+    private String fullname;
+    private String email;
+    private String  password;
     private int allocation;
 
     public int getId() {
@@ -19,27 +19,27 @@ public class User {
         this.id = id;
     }
 
-    public int getFullname() {
+    public String getFullname() {
         return fullname;
     }
 
-    public void setFullname(int fullname) {
+    public void setFullname(String fullname) {
         this.fullname = fullname;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

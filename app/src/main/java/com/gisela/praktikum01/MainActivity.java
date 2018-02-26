@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             UserLoginTask userLoginTask = new UserLoginTask(this);
             System.out.println("EMAIL : " + txtEmail.getText().toString() + "PASSWORD : " +
-                    txtPassword                    .getText()                    .toString());
+                    txtPassword.getText().toString());
             userLoginTask.execute(txtEmail.getText().toString(), txtPassword.getText().toString());
         }
     }

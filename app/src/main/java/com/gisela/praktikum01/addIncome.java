@@ -15,6 +15,10 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.gisela.praktikum01.adapter.IncomeCategoryAdapter;
+import com.gisela.praktikum01.entity.IncomeCategory;
+import com.gisela.praktikum01.entity.IncomeCategoryTask;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -34,22 +38,25 @@ public class addIncome extends AppCompatActivity {
     @BindView(R.id.txtDate) EditText txtDate;
     @BindView(R.id.btnBack) ImageButton btnBack;
     Calendar calendar=Calendar.getInstance();
+    Spinner spinner;
+    private IncomeCategoryAdapter icAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_income);
         ButterKnife.bind(this);
+        spinner = (Spinner) findViewById(R.id.cmbKategoriPemasukan);
+        icAdapter= new IncomeCategoryAdapter(this);
+        spinner.setAdapter(icAdapter);
+        IncomeCategoryTask icTask = new IncomeCategoryTask(this);
+        icTask.execute();
+    }
 
-        List<String> kategori = new ArrayList();
-        kategori.add("Gaji Pokok");
-        kategori.add("THR");
-        kategori.add("Bonus Bulanan");
-        kategori.add("Gaji ke-13");
-        Spinner spinner = (Spinner) findViewById(R.id.cmbKategoriPemasukan);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, kategori);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+    public void updateListWithData(ArrayList<IncomeCategory> categories) {
+        if (null != categories) {
+            icAdapter.setItems(categories);
+        }
     }
 
     @OnClick(R.id.btnBack)
